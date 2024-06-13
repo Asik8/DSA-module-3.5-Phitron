@@ -2,11 +2,6 @@
 using namespace std;
 #define ll long long int
 
-vector<int> CumulativeSum(vector<int>v)
-{
-    
-}
-
 int main()
 {
     ios::sync_with_stdio(false);
@@ -14,10 +9,13 @@ int main()
 
     int n;
     cin >> n;
-    vector <ll> ar(n);
+    ll ar[n];
+    vector <ll> v(n);
     for (int i = 0; i < n; i++)
         cin >> ar[i];
-
+    v[0] = ar[0];
+    for(int i=1;i<n;i++)
+        v[i] = v[i-1]+ar[i];
 
     for(int i=0;i<n;i++)
         cout<<v[i]<<" ";
